@@ -30,7 +30,7 @@ class Module {
             $this->dbConnection->query($this->query);
             $this->message = $this->moduleName.' Successfully Stored';
             $this->data = array();
-            $this->data['id'] = $this->dbConnection->lastInsertedId();
+            $this->data['id'] = $this->dbConnection->lastInsertId();
             $this->sendJSONResponse();
             
         }catch( PDOException $ex ) {
@@ -44,7 +44,7 @@ class Module {
             $this->dbConnection->query($this->query);
             $this->message = $this->moduleName.' Successfully Updated';
             $this->data = array();
-            $this->data['id'] = $this->dbConnection->lastInsertedId();
+            $this->data['id'] = $this->dbConnection->lastInsertId();
             $this->sendJSONResponse();
             
         }catch( PDOException $ex ) {

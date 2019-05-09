@@ -63,6 +63,7 @@ class Database {
     {
         try
         {
+            $this->statement->execute();
             if($this->statement->rowCount()){
                 return $this->statement->fetchObject();
             }
@@ -79,6 +80,7 @@ class Database {
     {
         try
         {
+            $this->statement->execute();
             return $this->statement->fetchAll(PDO::FETCH_OBJ);
         }
         catch(PDOException $ex)
@@ -91,6 +93,7 @@ class Database {
     {
         try
         {
+            $this->statement->execute();
             if($this->statement->rowCount()){
                 return $this->statement->fetchColumn();
             }
