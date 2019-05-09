@@ -16,12 +16,14 @@ class Module {
         $response['status'] = 200;
         $response['message'] = $this->message;
         $response['data'] = $this->data;
+        header('Content-Type: application/json');
         echo json_encode($response);
     }
 
     private function sendJSONErrorReponse(){
         $response['status'] = 403;
         $response['error'] = $this->message ;
+        header('Content-Type: application/json');
         echo json_encode($response);
     }
 
