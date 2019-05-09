@@ -1,6 +1,4 @@
 <?php
-use \PDO;
-
 // Core class which will handle your database request
 class Database {
     private $dbHost;
@@ -17,7 +15,7 @@ class Database {
 
     public function __construct(){
         $this->dbHost = 'localhost';
-        $this->dbName = 'testdb';
+        $this->dbName = 'test_mobileapi';
         $this->dbUsername = 'root';
         $this->dbPassword = 'mysql';
 
